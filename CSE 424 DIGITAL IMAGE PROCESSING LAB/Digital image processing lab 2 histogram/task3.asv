@@ -1,0 +1,7 @@
+im = imread('image.jpg');
+size(im);
+
+freq[1:256] = 0;
+
+
+

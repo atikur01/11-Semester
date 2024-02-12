@@ -1,0 +1,8 @@
+im = imread('image.jpg');
+imshow(im);
+
+size(im);
+
+grayScale_image = rgb2gray(im);
+figure,imshow( grayScale_image );
+

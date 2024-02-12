@@ -1,0 +1,191 @@
+create table loan(
+loan_number varchar(255),
+branch_name varchar(255),
+amount int
+);
+
+insert into loan VALUES
+    ("L-170","Downtown",3000),
+    ("L-230","Redwood",4000),
+    ("L-260","Perryridge",1700);
+   
+
+create table borrower(
+customer_name varchar(255),
+loan_number varchar(255)
+);
+
+insert into borrower VALUES
+    ("Jones","L-170"),
+    ("Smith","L-230"),
+    ("Hayes","L-155");
+
+SELECT sum(amount) from loan;
+
+
+select * from borrower left JOIN loan on
+borrower.loan_number = loan.loan_number;
+
+select * from borrower left JOIN loan on
+borrower.loan_number = loan.loan_number
+where loan.branch_name is NULL
+;
+
+select * from borrower Right JOIN loan on
+borrower.loan_number = loan.loan_number
+where borrower.customer_name is NULL
+;
+
+select * from borrower INNER JOIN loan on
+borrower.loan_number = loan.loan_number
+;
+
+
+task-----
+
+
+
+create table borrower(
+customer_name varchar(255),
+loan_number int(255)
+);
+
+insert into borrower VALUES
+    ("Tripty",105),
+    ("Nishan", 110),
+    ("Sohana", 118);
+
+create table Depositor(
+    customer_name varchar(255),
+    Account_number int
+);
+
+insert into Depositor values
+("Tripty",444),
+("Proma",555),
+("Siam",666),
+("Faysal",999);
+
+
+create table Branch(
+    Branch_name varchar(255),
+    Branch_city varchar(255),
+    Assets int
+);
+
+insert into Branch VALUES
+( "Dhanmondi","Dhaka",20000 ),
+( "Baani","Dhaka",    40000 ),
+( "Sapahar","Naogaon",50000 ),
+( "Jhautola","Cumilla",5000 ),
+( "Dhanmondi","Dhaka",10000 );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

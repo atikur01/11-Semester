@@ -1,0 +1,55 @@
+create database Information_student;
+
+create table information(
+ID int,
+Name varchar(20),
+SSC_Board varchar(20),
+SSC_CGPA float,
+SSC_Passing_Year year,
+HSC_Board varchar(20),
+HSC_CGPA float,
+HSC_Passing_Year year);
+
+
+insert into information values
+(1,'A','Rajshahi', 4.5, 2012, 'Rajshahi', 4.3, 2014),
+(2,'B','Rajshahi', 4.7, 2012, 'Dhaka', 4.6, 2014),
+(3,'C','Dhaka', 3.9, 2015, 'Dhaka', 4.2, 2018),
+(4,'D','Dhaka', 4.8, 2013, 'Rajshahi', 4.4, 2015),
+(5,'E','Cumilla', 4.6, 2014, 'Cumilla', 4.3, 2018),
+(6,'F','Cumilla', 4.0, 2015, 'Dhaka', 3.7, 2017),
+(7,'G','Rajshahi', 4.5, 2017, 'Rajshahi', 4.4, 2019),
+(8,'H','Dhaka', 4.7, 2018, 'Dhaka', 4.7, 2020);
+
+select * from information;
+
+
+#1
+select * from information
+where SSC_Board='Dhaka';
+
+#2
+select * from information
+where SSC_Board='Dhaka' and HSC_Board='Dhaka';
+
+#3
+select * from information
+where (SSC_Passing_Year+2)=HSC_Passing_Year;
+
+#4
+select * from information
+where SSC_Board!=HSC_Board;
+
+#5
+select * from information
+where SSC_CGPA=4.5 OR HSC_CGPA=4.5;
+
+#6
+select AVG(SSC_CGPA) as AVARAGE_SSC_CGPA_OF_RAJSHAHI_2012 from information
+where SSC_Board='Rajshahi' and SSC_Passing_Year=2012;
+
+#7
+select AVG(SSC_CGPA) as AVARAGE_SSC_CGPA_OF_RAJSHAHI from information
+where SSC_Board='Rajshahi';
+
+
